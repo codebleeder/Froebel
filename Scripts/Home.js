@@ -1,4 +1,4 @@
-﻿// EaselJS code
+﻿/*
 function init() {
     // load facebook SDK
     function init() {
@@ -40,6 +40,7 @@ function init() {
     document.getElementById('btn-share-fb').onclick = function () {
         FB.login(function () { }, { scope: 'publish_actions' });
     };
+    */
 
     canvas_main();
     canvas_side();
