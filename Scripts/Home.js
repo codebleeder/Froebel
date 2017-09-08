@@ -1,5 +1,6 @@
-﻿/*
+﻿
 function init() {
+    /*
     // load facebook SDK
     function init() {
         FB.ui({
