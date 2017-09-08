@@ -1,0 +1,78 @@
+﻿@font-face {
+    font-family: Metron;
+    /*src: url(~/Content/Metron.ttf) format('truetype'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */*/
+        src: local('Metron')
+}  
+
+body {
+    
+}
+
+#h1-title {
+    font-family: Metron;
+    color: rgb(239, 157, 249);
+    text-align: center;
+}
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 612px;
+    height: 500px;
+    /*border: 1px black solid;*/
+    margin: 0 auto;
+}
+
+.flex-item {
+    min-width: 100px;
+    min-height: 500px;
+    border: 1px black solid;
+    margin: 4px;
+    /*background: #369;*/
+}
+
+
+
+.canvas-container {
+    display: inline-block;
+    position: relative;
+}
+
+#canvas-main {
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    border: solid;
+    left: 30%;
+    position: relative;
+}
+
+#canvas-side {
+    width: 100px;
+    height: 500px;
+    display: inline-block;
+    border: solid;
+    left: 30%;
+    position: relative;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: whitesmoke;
+    border: none;
+}
+
+button:hover {
+    font-weight:bold;
+}
+
+button:active {
+    top:10px;
+    border: none;
+}
+
+#div-share {
+    text-align: center;
+}
