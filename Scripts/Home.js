@@ -1,64 +1,13 @@
 ﻿
-function init() {
-    /*
-    // load facebook SDK
-    function init() {
-        FB.ui({
-            method: 'share_open_graph',
-            action_type: 'og.likes',
-            action_properties: JSON.stringify({
-                object: 'http://localhost:49239/',
-            })
-        }, function (response) {
-            // Debug response (optional)
-            console.log(response);
-        });
-    }
-
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '174766579758550',
-            autoLogAppEvents: true,
-            xfbml: true,
-            version: 'v2.10'
-        });
-        FB.AppEvents.logPageView();
-       // init();
-    };
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    function myFacebookLogin() {
-        FB.login(function () { }, { scope: 'publish_actions' });
-    }
-
-    document.getElementById('btn-share-fb').onclick = function () {
-        FB.login(function () { }, { scope: 'publish_actions' });
-    };
-    */
-
-    canvas_main();
-    canvas_side();
-    function setTextColor(picker) {
+function init() {   
+    canvas_functions();
+    /*function setTextColor(picker) {
         //document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
         console.log('set text color');
-    }
-
-    
-
-}
-function canvas_main() {
-    //var canvas = new fabric.Canvas('canvas-main');
+    }*/
 }
 
-function canvas_side() {
-    // fabric
+function canvas_functions() {
     var canvas_side = new fabric.Canvas('canvas-side');
     var canvas_main = new fabric.Canvas('canvas-main');
     var shapes_main = {
@@ -223,23 +172,12 @@ function canvas_side() {
     
     
     fabric.Object.prototype.transparentCorners = true; 
-    
-
-    //canvas_side.on('mouse:over', function (e) {
-    //    rect_side.set('fill', 'red');
-    //    canvas_side.renderAll();
-    //});
 
     canvas_side.on('object:selected', function () {
         console.log('object selected');
     });
-    //canvas_side.on('mouse:out', function (e) {
-    //    rect_side.set('fill', 'green');
-    //    canvas_side.renderAll();
-    //});
-    canvas_side.hoverCursor = 'crosshair';
-
     
+    canvas_side.hoverCursor = 'crosshair';
 
     canvas_side.on('object:selected', function (opt) {        
         var shape_type = opt.target.get('type');
@@ -247,6 +185,7 @@ function canvas_side() {
         canvas_side.discardActiveObject();  
     });
 
+    // Draw shapes in the side-canvas 
     var rect_side = new fabric.Rect(shapes_side.rect);
     var triangle_side = new fabric.Triangle(shapes_side.triangle);
     canvas_side.add(rect_side);
@@ -259,20 +198,6 @@ function canvas_side() {
     canvas_side.add(right_triangle_side);
     var semi_circle_side = new fabric.Circle(shapes_side.semi_circle);
     canvas_side.add(semi_circle_side);
-
-    //var semi_circle_test = new fabric.Circle({
-    //    radius: 20,
-    //    left: 50,
-    //    top: 250,
-    //    angle: 90,
-    //    startAngle: 0,
-    //    endAngle: Math.PI,
-    //    //stroke: '#000',
-    //    //strokeWidth: 3,
-
-    //});
-
-    //canvas_side.add(semi_circle_test);
 
     window.onkeydown = onKeyDownHandler;
 
@@ -306,11 +231,3 @@ function canvas_side() {
 
    
 }
-
-//$(document).ready(function () {
-//    //function setTextColor(picker) {
-//    //    document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
-//    //}
-
-   
-//});
