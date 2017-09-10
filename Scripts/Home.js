@@ -1,13 +1,5 @@
 ﻿
 function init() {   
-    canvas_functions();
-    /*function setTextColor(picker) {
-        //document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
-        console.log('set text color');
-    }*/
-}
-
-function canvas_functions() {
     var canvas_side = new fabric.Canvas('canvas-side');
     var canvas_main = new fabric.Canvas('canvas-main');
     var shapes_main = {
@@ -229,5 +221,4 @@ function canvas_functions() {
         removeActiveObjects();
     }
 
-   
 }
