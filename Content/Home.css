@@ -1,7 +1,7 @@
 ﻿@font-face {
     font-family: Metron;
-    /*src: url(~/Content/Metron.ttf) format('truetype'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */*/
-        src: local('Metron')
+    src: url(~/Content/Metron.ttf) format('truetype'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       /* src: local('Metron')*/
 }  
 
 body {
