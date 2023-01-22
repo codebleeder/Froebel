@@ -1,5 +1,5 @@
 ## Froebel 2D
-Create art with basic geometric shapes. [Try it here!](http://codebleeder.github.com/Froebel)
+Create art with basic geometric shapes. [Try it here!](http://codebleeder.github.io/Froebel)
 
 ### Library used 
 [FabricJS](fabricjs.com)
